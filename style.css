@@ -1,0 +1,270 @@
+body {
+    background-color: #fff5e7;
+    margin: 0;
+}
+
+header {
+    background-color: #350609;
+    width: 100%;
+    height: 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    align-items: center;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff5e7;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+
+}
+
+nav a,
+p,
+button {
+    font-family: 'Lora', serif;
+}
+
+nav a:hover {
+    color: #d9ad42;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 3px;
+    background-color: #d9ad42;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.logo a {
+    color: #fff5e7;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+button {
+    background-color: #350609;
+    border: 1px solid #d9ad42;
+    border-radius: 30px;
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button a {
+    color: #fff5e7;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bxs-cart-alt {
+    font-size: 18px;
+    color: #fff5e7;
+}
+
+.logo img {
+    width: 230px;
+    height: auto;
+    max-height: 95px;
+    object-fit: contain;
+    display: block;
+}
+
+.hero-subtitulo {
+    display: block;
+    color: #d9ad42;
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: #fff5e7;
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    line-height: 1.12;
+    margin: 0 0 20px;
+}
+
+.hero .destaque {
+    color: #d9ad42;
+}
+
+.hero p {
+    max-width: 420px;
+}
+
+.btn-cardapio span {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+.hero {
+    min-height: 480px;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(20, 7, 4, 0.92) 0%,
+            rgba(20, 7, 4, 0.65) 38%,
+            rgba(20, 7, 4, 0.05) 72%),
+        url("img/baner.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 40px 6%;
+    box-sizing: border-box;
+}
+
+.hero p {
+    color: #fff5e7;
+    max-width: 420px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.btn-cardapio {
+    display: inline-block;
+    background-color: #d9ad42;
+    color: #350609;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-cardapio:hover {
+    background-color: #fff5e7;
+    transform: translateY(-2px);
+}
+
+/* Notebook e telas médias */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 25px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 100px;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 160px;
+        max-height: 70px;
+    }
+
+    nav {
+        position: static;
+        transform: none;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    nav a::after {
+        bottom: -6px;
+    }
+
+    header button {
+        padding: 8px 12px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 35px 24px;
+        background-position: center;
+    }
+
+    .hero-conteudo {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero-subtitulo {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+/* Celulares bem estreitos */
+@media (max-width: 375px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .logo img {
+        width: 135px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+}
