@@ -37,9 +37,7 @@ nav a {
 
 }
 
-nav a,
-p,
-button {
+nav a p button {
     font-family: 'Lora', serif;
 }
 
@@ -318,14 +316,11 @@ button a {
     margin: 0 0 8px;
 }
 
-.cardapio,
-h2,
-span {
+.cardapio h2 span {
     color: #350609
 }
 
-.cardapio,
-p {
+.cardapio p {
     color: #6d5b50;
     font-size: 20px;
     font-family: 'lora' serif;
@@ -361,6 +356,8 @@ p {
     overflow: hidden;
     box-shadow: 0 5px 18px rgba(53, 6, 9, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+
 }
 
 /* Efeito ao passar o mouse */
@@ -381,6 +378,9 @@ p {
 .card {
     padding: 20px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .card h3 {
@@ -396,6 +396,7 @@ p {
     font-size: 20px;
     line-height: 1.6;
     margin: 0 0 15px;
+    flex-grow: 1;
 }
 
 .card span {
@@ -412,9 +413,15 @@ p {
     width: 100%;
 }
 
+
 .btn-adicionar {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
     width: 100%;
+    box-sizing: border-box;
     margin: 15px auto 5px;
 
     background-color: #350609;
@@ -429,6 +436,13 @@ p {
 
     cursor: pointer;
     transition: 0.3s ease;
+    margin-top: auto;
+}
+
+.btn-adicionar i {
+    font-size: 18px;
+    color: #fff5e7;
+    flex-shrink: 0;
 }
 
 .btn-adicionar:hover {
