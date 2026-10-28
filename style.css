@@ -552,8 +552,246 @@ button a {
 
     .card {
         width: 100%;
-        max-width: 230px;
+        max-width: 250px;
         padding: 14px;
         justify-self: center;
+    }
+}
+
+/* FOOTER */
+.footer {
+    background: #350609;
+    color: #fff5e7;
+    border-top: 3px solid #d9ad42;
+    margin-top: 60px;
+    font-family: 'Lora', serif;
+}
+
+.conteudo-footer {
+    display: grid;
+    grid-template-columns: 1.4fr 0.7fr 1fr 1.15fr 0.45fr;
+    gap: 35px;
+    align-items: start;
+    padding: 55px 50px 40px;
+}
+
+/* LOGO */
+.logo-footer img {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+}
+
+.logo-footer p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+/* TÍTULOS */
+.footer h2 {
+    color: #f2d27a;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 5px 0 28px;
+    position: relative;
+}
+
+.footer h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 42px;
+    height: 2px;
+    background: #d9ad42;
+}
+
+/* NAVEGAÇÃO */
+.Navegacao-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Navegacao-footer a {
+    color: #fff5e7;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 1px;
+    transition: color 0.3s;
+}
+
+.Navegacao-footer a:hover {
+    color: #f2d27a;
+}
+
+/* CONTATO */
+.contato-footer>a,
+.contato-footer>p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff5e7;
+    font-size: 15px;
+    line-height: 1.6;
+    text-decoration: none;
+    margin: 0 0 20px;
+}
+
+.contato-footer i {
+    color: #f2d27a;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+/* REDES SOCIAIS */
+.icones-redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 5px 0 25px;
+}
+
+.icones-redes a {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #d9ad42;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2d27a;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icones-redes a:hover {
+    background: #d9ad42;
+    color: #350609;
+    transform: translateY(-3px);
+}
+
+.redes-footer>p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* BUON APPETITO */
+.frase-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    color: #f2d27a;
+}
+
+.frase-footer span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1;
+    transform: rotate(-8deg);
+}
+
+.frase-footer i {
+    font-size: 65px;
+    margin-top: 25px;
+    transform: rotate(-35deg);
+}
+
+/* FAIXA INFERIOR */
+.rodape-final {
+    border-top: 1px solid rgba(217, 173, 66, 0.55);
+    padding: 22px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.rodape-final p {
+    margin: 0;
+}
+
+.rodape-detalhes {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.bandeira-italia {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .conteudo-footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 30px;
+        padding: 45px 30px;
+    }
+
+    .logo-footer img {
+        max-width: 280px;
+    }
+
+    .frase-footer {
+        display: none;
+    }
+
+    .rodape-final {
+        padding: 22px 30px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 500px) {
+    .conteudo-footer {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 40px 25px;
+    }
+
+    .logo-footer img {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .logo-footer p {
+        font-size: 15px;
+    }
+
+    .footer h2 {
+        font-size: 22px;
+    }
+
+    .frase-footer {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 0;
+    }
+
+    .frase-footer i {
+        font-size: 45px;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+        text-align: center;
+        padding: 22px 20px;
+        gap: 15px;
+    }
+
+    .rodape-detalhes {
+        justify-content: center;
+        gap: 8px;
     }
 }
