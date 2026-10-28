@@ -552,7 +552,7 @@ button a {
 
     .card {
         width: 100%;
-        max-width: 260px;
+        max-width: 200px;
         padding: 14px;
         justify-self: center;
     }
