@@ -834,6 +834,8 @@ nav a.ativo {
     display: flex;
     align-items: center;
     padding: 40px 6%;
+    width: 100%;
+    max-width: 100%;
 }
 
 .conteudo-banner span {
@@ -890,4 +892,10 @@ nav a.ativo {
     width: 100%;
     min-width: 0;
     box-sizing: border-box;
+}
+
+@media (min-width: 1025px) {
+    .conteudo-footer {
+        grid-template-columns: 1.4fr 0.7fr 1fr 1.15fr;
+    }
 }
