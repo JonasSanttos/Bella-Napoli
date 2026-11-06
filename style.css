@@ -503,6 +503,30 @@ nav a.ativo {
         font-size: 15px;
         padding: 14px 12px;
     }
+
+    .banner-cardapio {
+        min-height: 380px;
+        padding: 30px 24px;
+    }
+
+    .conteudo-banner span {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .conteudo-banner span::before,
+    .conteudo-banner span::after {
+        width: 30px;
+    }
+
+    .conteudo-banner h1 {
+        font-size: 36px;
+    }
+
+    .conteudo-banner p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
 }
 
 /* CELULARES: UM CARD POR LINHA */
