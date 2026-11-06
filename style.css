@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 /* CABEÇALHO */
 header {
     background-color: #350609;
@@ -38,7 +42,8 @@ nav a {
     position: relative;
     transition: color 0.3s ease;
     font-size: 20px;
-    font-family: 'Lora', serif;
+    font-family: 'Cormorant Garamond', serif;
+
 }
 
 nav a:hover {
@@ -205,6 +210,10 @@ button a {
     align-items: center;
     justify-content: center;
     gap: 15px;
+}
+
+nav a.ativo {
+    color: #d9ad42;
 }
 
 .cardapio h2 {
@@ -614,14 +623,21 @@ button a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
 }
 
-.Navegacao-footer a {
+.Navegacao-footer span {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: #fff5e7;
+    font-size: 15px;
+    line-height: 1.6;
     text-decoration: none;
-    font-size: 14px;
-    margin: 1px;
-    transition: color 0.3s;
+    margin: 0;
+
 }
 
 .Navegacao-footer a:hover {
@@ -680,29 +696,6 @@ button a {
     line-height: 1.6;
 }
 
-/* BUON APPETITO */
-.frase-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    color: #f2d27a;
-}
-
-.frase-footer span {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 1;
-    transform: rotate(-8deg);
-}
-
-.frase-footer i {
-    font-size: 65px;
-    margin-top: 25px;
-    transform: rotate(-35deg);
-}
 
 /* FAIXA INFERIOR */
 .rodape-final {
@@ -743,10 +736,6 @@ button a {
         max-width: 280px;
     }
 
-    .frase-footer {
-        display: none;
-    }
-
     .rodape-final {
         padding: 22px 30px;
     }
@@ -773,16 +762,6 @@ button a {
         font-size: 22px;
     }
 
-    .frase-footer {
-        display: flex;
-        align-items: flex-start;
-        padding-top: 0;
-    }
-
-    .frase-footer i {
-        font-size: 45px;
-    }
-
     .rodape-final {
         flex-direction: column;
         text-align: center;
@@ -794,4 +773,68 @@ button a {
         justify-content: center;
         gap: 8px;
     }
+}
+
+/* BANNER CARDÁPIO */
+
+.banner-cardapio {
+    min-height: 480px;
+    background-image:
+        linear-gradient(90deg,
+            rgba(20, 7, 4, 0.92) 0%,
+            rgba(20, 7, 4, 0.65) 38%,
+            rgba(20, 7, 4, 0.05) 72%),
+        url("img/baner.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 40px 6%;
+}
+
+.conteudo-banner span {
+    color: #d9ad42;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: fit-content;
+    white-space: nowrap;
+    font-size: 22px;
+}
+
+.conteudo-banner span::before,
+.conteudo-banner span::after {
+    content: "";
+    width: 85px;
+    height: 2px;
+    background-color: #d9ad42;
+    font-family: 'Lora', serif;
+}
+
+.conteudo-banner h1 {
+    color: #fff5e7;
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    margin: 15px 0;
+}
+
+.conteudo-banner h1 strong {
+    color: #d9ad42;
+}
+
+.conteudo-banner p {
+    color: #fff5e7;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
+
+.conteudo-banner {
+    width: 100%;
+    max-width: 1200px;
 }

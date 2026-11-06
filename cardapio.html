@@ -5,11 +5,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio| Bella Napoli</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
 
-    <h1>Olá Jonas</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="cardapio.html" class="ativo">Cardápio</a>
+            <a href="sobrenos.html">Sobre nós</a>
+            <a href="#">Contato</a>
+        </nav>
+
+        <button>
+            <i class="bx bxs-cart-alt"></i>
+            <a href="#">Carrinho</a>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="banner-cardapio">
+            <div class="conteudo-banner">
+                <span>Nosso cardápio</span>
+
+                <h1>Pizzas <strong>Especiais</strong></h1>
+
+                <p>Escolha sua favorita e viva essa experiência.</p>
+            </div>
+        </section>
+
+        <section class="cardapio" id="cardapio">
+
+            <div class="cardapio-conteudo">
+
+                <span class="cardapio-subtitulo">
+                    <span class="linha-dourada"></span>
+                    NOSSO CARDÁPIO
+                    <span class="linha-dourada"></span>
+                </span>
+
+                <h2>Pizzas <span>tradicionais</span></h2>
+
+            </div>
+
+            <!-- CARDS DAS PIZZAS -->
+
+            <div class="card-container">
+
+
+                <div class="card">
+                    <img src="img/Pizza de Margherita.jpg" alt="Pizza Margherita">
+                    <h3>Margherita</h3>
+                    <p>Molho de tomate, mussarela, manjericão e azeite de oliva.</p>
+                    <span>R$ 42,90</span>
+                    <button class="btn-adicionar"> <i class="bx bxs-cart-alt"></i>
+                        Adicionar
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="img/Pizza de Calabresa.jpg" alt="Pizza Calabresa">
+
+                    <h3>Calabresa</h3>
+                    <p>Molho de tomate, mussarela fresca , calabresa e cebola.</p>
+                    <span>R$ 44,90</span>
+                    <button class="btn-adicionar"> <i class="bx bxs-cart-alt"></i>
+                        Adicionar
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="img/Pizza 4 Queijos.jpg" alt="Pizza Quatro Queijos">
+
+                    <h3>Quatro Queijos</h3>
+                    <p>Mussarela, parmesão, provolone e gorgonzola.</p>
+                    <span>R$ 49,90</span>
+                    <button class="btn-adicionar"> <i class="bx bxs-cart-alt"></i>
+                        Adicionar
+                    </button>
+
+                </div>
+                <div class="card">
+                    <img src="img/Pizza de portuguesa.jpg" alt="Pizza Portuguesa">
+
+                    <h3>Portuguesa</h3>
+                    <p>Molho de tomate, mussarela, presunto, ovo, cebola e azeitona</p>
+                    <span>R$ 46,90</span>
+                    <button class="btn-adicionar"> <i class="bx bxs-cart-alt"></i>
+                        Adicionar
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="conteudo-footer">
+
+            <!-- LOGO -->
+            <div class="logo-footer">
+                <img src="img/logo.png" alt="Bella Napoli">
+            </div>
+
+            <!-- NAVEGAÇÃO -->
+            <nav class="Navegacao-footer">
+                <h2>Navegação</h2>
+                <span>Inicio</span>
+                <span>Cardápio</span>
+                <span>Sobre Nós</span>
+                <span>Nossa historia</span>
+            </nav>
+
+            <!-- CONTATO -->
+            <div class="contato-footer">
+                <h2>Contato</h2>
+
+                <a href="#">
+                    <i class="bx bx-phone"></i>
+                    <span>(00) 00000-0000</span>
+                </a>
+
+                <p>
+                    <i class="bx bx-map"></i>
+                    <span>Sua cidade, Brasil</span>
+                </p>
+
+                <p>
+                    <i class="bx bx-time-five"></i>
+                    <span>Consulte nossos horários</span>
+                </p>
+            </div>
+
+            <!-- REDES SOCIAIS -->
+            <div class="redes-footer">
+                <h2>Redes Sociais</h2>
+
+                <div class="icones-redes">
+                    <a href="#" aria-label="Whatsapp">
+                        <i class="bx bxl-whatsapp"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="bx bxl-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="bx bxl-youtube"></i>
+                    </a>
+                </div>
+
+                <p>
+                    Acompanhe nossas novidades,<br>
+                    promoções e muito mais!
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FAIXA INFERIOR -->
+        <div class="rodape-final">
+            <p>© 2026 Bella Napoli Pizzaria. Todos os direitos reservados.</p>
+
+            <div class="rodape-detalhes">
+                <span>Pizzas artesanais</span>
+                <span>•</span>
+                <span>Ingredientes selecionados</span>
+                <span>•</span>
+                <span>Feitas com paixão</span>
+                <span class="bandeira-italia">🇮🇹</span>
+            </div>
+        </div>
+
+    </footer>
 
 </body>
 
