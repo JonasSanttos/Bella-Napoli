@@ -26,7 +26,7 @@ header {
     position: relative;
 }
 
-nav {
+header nav {
     display: flex;
     justify-self: center;
     gap: 40px;
@@ -36,7 +36,7 @@ nav {
     font-weight: bold;
 }
 
-nav a {
+header nav a {
     color: #fff5e7;
     text-decoration: none;
     position: relative;
@@ -46,11 +46,11 @@ nav a {
 
 }
 
-nav a:hover {
+header nav a:hover {
     color: #d9ad42;
 }
 
-nav a::after {
+header nav a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -62,7 +62,7 @@ nav a::after {
     transition: transform 0.3s ease;
 }
 
-nav a:hover::after {
+header nav a:hover::after {
     transform: scaleX(1);
 }
 
@@ -345,7 +345,7 @@ nav a.ativo {
         padding: 0 25px;
     }
 
-    nav {
+    header nav {
         gap: 20px;
     }
 
@@ -406,7 +406,7 @@ nav a.ativo {
         flex-shrink: 0;
     }
 
-    nav {
+    header nav {
         position: static;
         transform: none;
         width: 100%;
@@ -418,12 +418,12 @@ nav a.ativo {
         gap: 15px;
     }
 
-    nav a {
+    header nav a {
         font-size: 13px;
         white-space: nowrap;
     }
 
-    nav a::after {
+    header nav a::after {
         bottom: -6px;
     }
 
@@ -537,11 +537,11 @@ nav a.ativo {
         font-size: 11px;
     }
 
-    nav {
+    header nav {
         gap: 10px;
     }
 
-    nav a {
+    header nav a {
         font-size: 12px;
     }
 
@@ -744,9 +744,19 @@ nav a.ativo {
 /* CELULAR */
 @media (max-width: 500px) {
     .conteudo-footer {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 35px;
         padding: 40px 25px;
+        width: 100%;
+    }
+
+    .conteudo-footer>* {
+        min-width: 0;
+    }
+
+    .footer {
+        width: 100%;
+        overflow-x: clip;
     }
 
     .logo-footer img {
@@ -837,4 +847,16 @@ nav a.ativo {
 .conteudo-banner {
     width: 100%;
     max-width: 1200px;
+}
+
+.footer {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.conteudo-footer {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
