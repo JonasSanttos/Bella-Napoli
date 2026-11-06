@@ -258,7 +258,7 @@ nav a.ativo {
     gap: 24px;
     width: 100%;
     max-width: 1200px;
-    margin: 40px auto 0;
+    margin: 15px auto 0;
 }
 
 /* CARD INDIVIDUAL */
@@ -423,11 +423,12 @@ nav a.ativo {
         justify-self: center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 22px;
+        row-gap: 14px;
     }
 
     header nav a {
-        font-size: 13px;
+        font-size: 16px;
         white-space: nowrap;
     }
 
@@ -570,11 +571,11 @@ nav a.ativo {
     }
 
     header nav {
-        gap: 10px;
+        gap: 15px;
     }
 
     header nav a {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .hero h1 {
@@ -899,4 +900,91 @@ nav a.ativo {
     .conteudo-footer {
         grid-template-columns: 1.4fr 0.7fr 1fr 1.15fr;
     }
+}
+
+/* AJUSTE DO BANNER DO CARDÁPIO NO CELULAR */
+@media (max-width: 768px) {
+
+    .conteudo-banner span {
+        font-size: 10px;
+        gap: 10px;
+    }
+
+    .conteudo-banner span::before,
+    .conteudo-banner span::after {
+        width: 30px;
+    }
+
+    .conteudo-banner h1 {
+        font-size: 36px;
+        line-height: 1.12;
+        margin: 15px 0 20px;
+    }
+
+    .conteudo-banner p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+}
+
+/* AJUSTE DO HEADER PARA TABLETS */
+@media (min-width: 601px) and (max-width: 768px) {
+
+    header nav {
+        gap: 30px;
+    }
+
+    header nav a {
+        font-size: 19px;
+    }
+
+}
+
+#tradicionais {
+    padding-top: 0;
+}
+
+#tradicionais .card-container {
+    margin-top: 1px;
+}
+
+.cardapio-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid #d9ad42;
+    padding-bottom: 20px;
+}
+
+/* CATEGORIAS DO CARDÁPIO */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 24px;
+    border: 1px solid #d9ad42;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    background-color: #350609;
+    transition: 0.3s ease;
+}
+
+.categorias a:hover {
+    background-color: #350609;
+    color: #d9ad42;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(53, 6, 9, 0.18);
+    border-color: #350609;
 }
